@@ -1,0 +1,117 @@
+<!DOCTYPE html>
+<html lang="ja">
+
+  <head>
+    <meta charset="UTF-8">
+    <title>js整形後</title>
+    <link rel="stylesheet" type="text/css" href="noteStyle.css">
+  </head>
+
+  <body>
+    <h1>jsの関数やjQueryの関数について</h1>
+    <!--==================================================================-->
+    <h2>JavaScript側の関数など</h2>
+    <h3>ーイベント発火用関数ー</h3><!--==================================================================-->
+    <ul>
+      <li>'click' <br>=> クリック</li>
+      <li>'mousemove' <br>=> マウスがターゲット内に侵入した瞬間</li>
+      <li>'mouseover' <br>=> マウスが乗ってる</li>
+      <li>'mouseout' <br>=> マウスが外に出た瞬間</li>
+      <li>'mousedown' <br>=> ボタンが押された</li>
+      <li>'mouseup' <br>=> ボタンが離された</li>
+      <br>
+      <li>'keypress' <br>=> キーを押して離した</li>
+      <li>'keydown' <br>=> キーを押している</li>
+      <li>'keyup' <br>=> キーを離した瞬間</li>
+      <br>
+      <li>'DOMFocusIn' <br>=> ターゲットがフォーカスを受け取った</li>
+      <li>'DOMFocusOut' <br>=> ターゲットがフォーカスを失った</li>
+      <li>'DOMActive' <br>=> ターゲットがアクティブになった</li>
+      <br>
+      <li>'select' <br>=> テキストフィールドで文字が選択された</li>
+      <li>'change' <br>=> コントロールの値が変化した</li>
+      <li>'submit' <br>=> submitが押された</li>
+      <li>'reset' <br>=> resetボタンが押された</li>
+      <li>'focus' <br>=> コントロールがフォーカスを受け取った</li>
+      <li>'blur' <br>=> コントロールがフォーカスを失った。</li>
+      <br>
+      <li>'load' <br>=> 読み込みが完了した時</li>
+      <li>'scroll' <br>=> コントロール付属のスクロールバー位置が変更された時</li>
+      <li>'resize' <br>=> コントロールのサイズが変更されたときに発火</li>
+      <br>
+      <li>'touchstart' <br>=> タッチ開始されたとき</li>
+      <li>'touchmove' <br>=> 指を画面上で動かしているとき</li>
+      <li>'touchend' <br>=> 指を画面から離したとき</li>
+    </ul>
+
+    <h3>addEventListenerの第二引数のfunction(e)に使えるもの</h3>
+    <ul>
+      <li>e.target <br>=> 対象の要素</li>
+      <li>e.clientX <br>=> ブラウザ画面内のX座標</li>
+      <li>e.clientY <br>=> ブラウザ画面内のY座標</li>
+      <li>e.pageX <br>=> HTML全体のX座標</li>
+      <li>e.pageY <br>=> HTML全体のY座標</li>
+      <li>e.offsetX <br>=> ターゲット内のX座標</li>
+      <li>e.offsetY <br>=> ターゲット内のY座標</li>
+    </ul>
+
+    <h3>ーイベントの内容ー</h3><!--==================================================================-->
+    <ul>
+      <li> <br>=> </li>
+      <li> <br>=> </li>
+      <li> <br>=> </li>
+      <li> <br>=> </li>
+      <li> <br>=> </li>
+      <li> <br>=> </li>
+    </ul>
+
+
+
+    <!--==================================================================-->
+    <h2>jQuery側の関数など</h2>
+    <p>-基礎構文-</p>
+    <code>
+      <pre>
+        jQuery(function(){
+          $('対象セレクター').条件(function({
+            $(this).メソッド(引数).
+            $(this).メソッド(引数).
+            $(this).メソッド(引数);
+          });
+        });
+      </pre>
+    </code>
+    <h3>ーイベント発火用関数ー</h3><!--==================================================================-->
+    <p>ひょっとしてjavascriptと共通なのでは？</p>
+    <ul>
+        <li>change <br>=> 要素の内容が変わったとき</li>
+        <li>click <br>=> 指定されたセレクターがクリックされた</li>
+        <li> <br>=> </li>
+        <li> <br>=> </li>
+        <li> <br>=> </li>
+        <li> <br>=> </li>
+        <li> <br>=> </li>
+        <li> <br>=> </li>
+      </ul>
+
+
+
+    <h3>ーイベントの内容ー</h3><!--==================================================================-->
+    <ul>
+      <li>addClass('任意のクラス名'); <br>=> クラスを追加する</li>
+      <li>attr('取得する属性','属性の内容'); <br>=> 属性の中身を書き換える</li>
+      <li>hide(); <br>=> 要素を非表示にする</li>
+      <li>show(); <br>=> 要素を表示する</li>
+      <li>toggle(); <br>=> 非表示、表示を切り替える</li>
+      <li>text('書き換える内容') <br>=> 要素内のテキストを引数の内容に書き換える。</li>
+      <li>fadeOut() <br>=> </li>
+      <li>fadeIn() <br>=> </li>
+      <li>slideUp() <br>=> </li>
+      <li>slideDown() <br>=> </li>
+      <li>.scrollTop() <br>=> </li>
+      <li>.scrollLeft() <br>=> </li>
+    </ul>
+
+
+  </body>
+</html>

@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="ja">
+
+  <head>
+    <meta charset="UTF-8">
+    <title>js入門note</title>
+    <link rel="stylesheet" type="text/css" href="style.css">
+  </head>
+
+  <body>
+    <h1>javascript</h1>
+    <h2>ビギナー関数一覧</h2>
+    <code>
+      <pre>
+      //アラートの表示
+      //alert(表示したい内容)
+      alert();
+
+      //ウィンドウオブジェクトのDOMコンテントが読み込まれたらこのイベントを読み込む
+      window.addEventListener('DOMContentLoaded', //loadの場合、画像やCSSまで読み込まれてから発動する
+        function(){
+
+        },false //ここは無くてもいいらしいけど、ここ本当は失敗した時の処理を書く…のかな？
+      );
+
+      //ES5までにおけるidやclassの取得。単に変数に格納する。
+      var getId = document.getElementById();
+      var getTag = document.getElementsByTagName();
+      var getClass = document.getElementsByClassName();
+
+      //ES6におけるid,class,要素の取得。それぞれ……
+      /*
+      id = "#xxxx"
+      class = ".xxxx"
+      tag = "xxxx"
+      */
+      let getQuery = document.querySelector();
+
+      //xxxに格納した要素の色を変える
+      xxx.style.color("#2222");
+
+      //対象の変数に格納したオブジェクトを第一引数に指定した条件で、第二引数に指定した関数を実行
+      xxxx.addEventListener('keyup',function() {
+
+        //対象xxxxの、文字列の、文字数を変数yに格納
+        let y = this.value.length;
+
+        //変数elementに要素を格納
+        let element = document.querySelector('.任意の要素');
+
+        //innerText = 該当要素で囲まれた部分のテキスト
+        element.innerText = y;
+
+      });
+    </pre>
+  </code>
+  </body>
+
+  <h2>jQueryでよく使われるもの</h2>
+  table>
+</html>
