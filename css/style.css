@@ -4,3 +4,21 @@
   border: solid 2px #888;
   background: #eef;
 }
+
+.required{
+  color: #f88;
+  border: solid 1px #f88;
+  background: #fee;
+  border-radius: 4px;
+  padding: 1px 4px;
+  font-size: 12px;
+}
+
+.no-required{
+  color: #88f;
+  border: solid 1px #88f;
+  background: #eef;
+  border-radius: 4px;
+  padding: 1px 4px;
+  font-size: 12px;
+}

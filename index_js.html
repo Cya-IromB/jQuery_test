@@ -1,0 +1,84 @@
+<!DOCTYPE html>
+<html lang="ja">
+
+  <head>
+    <meta charset="UTF-8">
+    <title>javascriptのタスク</title>
+    <link rel="stylesheet" type="text/css" href="css/style.css">
+    <link rel="stylesheet" type="text/css" href="css/js_style.css">
+    <link rel="stylesheet" type="text/css" href="css/index_js.css">
+  </head>
+
+  <body>
+    <h3>jQueryやjsでいろいろ弄ってみる。</h3>
+    <p>やるべきこと</p>
+    <ul>
+      <li>フォーム入力チェック(バリデーションチェック)</li>
+      <li>フォーム自動成型</li>
+    </ul>
+
+    <p>やりたいこと(今回はやらないこと)</p>
+    <ul>
+      <li>スクロール量に応じて多重レイヤースクロール</li>
+      <li>上から透明度下げつつシュッと現れるボタン</li>
+      <li>各種ショートカットキーの作り方</li>
+      <ul>
+        <li>ctrl + enterで投稿</li>
+        <li>ctrl + 左右でページ切り替え</li>
+        <li>複数キーの同時押しでできるショートカット</li>
+        <li>クリップボードへコピーするボタン(ctrl + alt + enterでショートカットできると吉？)</li>
+        <li>fixedで左右にページ切り替えボタンを表示</li>
+      </ul>
+    </ul>
+
+    <h2>フォーム入力チェック</h2>
+    <p>以下タスク</p>
+    <ul>
+      <li>文字数0</li>
+      <li>規定文字数オーバー</li>
+      <li>メールアドレス形式か</li>
+      <li>半角英数のみ可</li>
+      <li></li>
+      <li></li>
+    </ul>
+
+    <p>尚、htmlでもrequiredで必須化は出来るが、今回はアルゴリズムのために実装する。</p>
+    <p>また、pattern属性で正規化も実現できるちゃう。…ひょっとしてjsによる正規表現不要説ねぇ？</p>
+    <p>→調べてみたらほぼhtmlとcssだけで行けちゃうらしい。でも今回はjsが主役。</p>
+    <p>他でhtmlとcssのバリデーションチェックをやるのも悪くなさそう。</p>
+
+
+    <form action="var.html" method="post">
+      <label>
+        <p>文字数0バリデーション<span class="required">*必須</span> : <span class="info js-error-none">*ここに文字</span></p>
+        <input type="text" name="zero" id="js-zero" class="js-input-onerow-normal">
+      </label>
+
+      <label>
+        <p>文字数over20<span class="no-required">*任意</span> : <span class="info js-error-none">*ここに文字</span></p>
+        <input type="text" name="over" id="js-over" class="js-input-onerow-normal">
+      </label>
+
+      <label>
+        <p>メアド形式<span class="required">*必須</span> : <span class="info js-error-none">*ここに文字</span></p>
+        <input type="text" name="email" id="js-email" class="js-input-onerow-normal">
+      </label>
+
+      <label>
+        <p>半角英数<span class="no-required">*任意</span> : <span class="info js-error-none">*ここに文字</span></p>
+        <input type="text" name="hankaku" id="js-eisuu" class="js-input-onerow-normal">
+      </label>
+
+      <label>
+        <p>文字0、over30<span class="required">*必須</span> : <span class="info js-error-none">*ここに文字</span></p>
+        <input type="text" name="zero-over
+        " id="js-zero-over" class="js-input-onerow-normal">
+      </label>
+
+    </form>
+
+
+    <script src="js/jquery-3.4.0.min.js"></script>
+    <script src="js/script.js"></script>
+  </body>
+</html>
